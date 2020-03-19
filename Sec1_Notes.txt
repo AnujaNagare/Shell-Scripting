@@ -1,0 +1,26 @@
+
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ cat /etc/shells 
+# List of acceptable shells for chpass(1).
+# Ftpd will not allow users to connect who are not using
+# one of these shells.
+
+/bin/bash
+/bin/csh
+/bin/ksh
+/bin/sh
+/bin/tcsh
+/bin/zsh
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ echo #SHELL
+
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ ps $$
+  PID   TT  STAT      TIME COMMAND
+60079 s000  S      0:00.82 -bash
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ date
+Thu Mar 19 01:05:15 CDT 2020
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ whereisdate
+-bash: whereisdate: command not found
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ whereis date
+/bin/date
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ man <command>
+-bash: syntax error near unexpected token `newline'
+

@@ -1,0 +1,9 @@
+
+KornShell complies with POSIX.2, Shell and Utilities, Command Interpreter (IEEE Std 1003.2-1992.) Major differences between KornShell and the traditional Bourne shell include:
+
+    Job control, command aliasing, and command history designed after the corresponding C shell features. Job control was added to the Bourne Shell in 1989.[9]
+    A choice of three command line editing styles based on vi, Emacs, and Gosling Emacs.
+    Associative arrays and built-in floating point arithmetic operations (only available in the ksh93 version of KornShell).
+    Dynamic extensibility of built-in commands (as of ksh93).
+
+ref: https://en.wikipedia.org/wiki/KornShell
