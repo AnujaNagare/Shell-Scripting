@@ -24,3 +24,110 @@ Anujas-MacBook-Pro:Shell-Scripting anujanagare$ whereis date
 Anujas-MacBook-Pro:Shell-Scripting anujanagare$ man <command>
 -bash: syntax error near unexpected token `newline'
 
+
+-------------------
+
+ Sec1 : Part 6
+
+- Initialization files helps user customize thr working environment 
+
+- /etc/profile
+	-  systemwide file
+	- sys admin maintains
+	- sets shell variables: eg : PATH, USER, HOSTNAME etc
+
+- ~/.bash_profile
+	- executed for login shells
+
+- ~/.bash_rc
+	- executed for interactive non-login shells 
+
+
+- ~/.bash_logout
+
+-------------------
+ Sec1 : Part 7
+
+
+for mac adduser:
+sudo sysadminctl -addUser temp_User
+password is set same as current user's pssword if not set 
+-- reset from GUI
+
+
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ sudo su - temp_User
+Anujas-MacBook-Pro:~ temp_User$ whoami
+temp_User
+Anujas-MacBook-Pro:~ temp_User$ echo $SHELL
+/bin/bash
+
+
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ sudo su - temp_User
+
+Anujas-MacBook-Pro:~ temp_User$ ps
+  PID TTY           TIME CMD
+14869 ttys001    0:00.01 -bash
+
+
+--------------------
+
+ Sec1 : Part 8-9
+ Anujas-MacBook-Pro:Shell-Scripting anujanagare$ vi Lect1.sh
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ ./Lect1.sh
+-bash: ./Lect1.sh: Permission denied
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ chmod 775 Lect1.sh
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ ./Lect1.sh
+Hello World!
+5+5
+
+--------------------
+
+ Sec1 : Part 10
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ vi Lect1_2.sh
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ ./Lect1_2.sh
+Today's Date : Fri Apr 10 18:34:10 CDT 2020
+System is up : 18:34  up 4 days, 23:57, 3 users, load averages: 1.50 2.14 2.23
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ 
+
+
+
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ vi Lect1_2.sh
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ ./Lect1_2.sh
+++ date
++ echo 'Today'\''s Date : Fri Apr 10 18:38:52 CDT 2020'
+Today's Date : Fri Apr 10 18:38:52 CDT 2020
+++ uptime
++ echo 'System is up : 18:38  up 5 days, 2 mins, 3 users, load averages: 2.01 2.06 2.15'
+System is up : 18:38  up 5 days, 2 mins, 3 users, load averages: 2.01 2.06 2.15
++ set -x
++ echo 'Hello without debug mode'
+Hello without debug mode
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ cat Lect1_2.sh
+#!/bin/bash
+
+set -x #to run in debug mode 
+echo "Today's Date : $(date)"
+echo "System is up : $(uptime)"
+set -x
+
+echo "Hello without debug mode"
+
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ vi Lect1_2.sh
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ ./Lect1_2.sh
+./Lect1_2.sh: line 11: syntax error near unexpected token `echo'
+./Lect1_2.sh: line 11: `echo $i'
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ cat Lect1_2.sh
+#!/bin/bash
+
+set -n
+echo "Today's Date : $(date)"
+echo "System is up : $(uptime)"
+
+echo "Hello without debug mode"
+
+
+for i in `cat my file`
+echo $i
+done
+
+
