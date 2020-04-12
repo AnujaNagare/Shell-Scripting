@@ -1,1 +1,50 @@
 #Sec4_Notes.txt
+
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ echo -e "\033[1;31m This is red text \033[0m"
+ This is red text 
+
+ Anujas-MacBook-Pro:Shell-Scripting anujanagare$ echo -e "\033[1;34;42m This is blue text with green back \033[0m"
+ This is blue text with green back 
+
+ Anujas-MacBook-Pro:Shell-Scripting anujanagare$ echo -e "\033[1;34m This is blue text \033[0m"
+ This is blue text 
+
+ Anujas-MacBook-Pro:Shell-Scripting anujanagare$ echo -e "\033[1;4m This is underline text \033[0m"
+ This is underline text 
+
+ Anujas-MacBook-Pro:Shell-Scripting anujanagare$ echo -e "\033[1;32m This is red text \033[0m"
+ This is red text 
+
+ Anujas-MacBook-Pro:Shell-Scripting anujanagare$ echo -e "\033[1;34;42m This is blue text with green back \033[0m"
+ This is blue text with green back 
+
+------------------------
+
+ Anujas-MacBook-Pro:Shell-Scripting anujanagare$ vi server.sh
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ ./server.sh
+System Information
+
+
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ ping -c 1 google.com
+PING google.com (216.58.194.110): 56 data bytes
+64 bytes from 216.58.194.110: icmp_seq=0 ttl=54 time=25.519 ms
+
+--- google.com ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 25.519/25.519/25.519/0.000 ms
+
+
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ ping -c 1 google.com &> /dev/null
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ 
+
+
+-  &> /dev/null. : nullifies output , redirect the outputs to /dev/null
+
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ test condition && true-command || false-command 
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ ping -c 1 google.com &> /dev/null && int="Connected" || int="Not Connected"
+
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ echo $int
+Connected
+
+ 
+
