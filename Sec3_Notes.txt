@@ -1,0 +1,18 @@
+#Sec3_Notes.txt
+
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ alias d='date'
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ d
+Fri Apr 10 23:55:04 CDT 2020
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ alias c='clear'
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ c
+
+
+
+
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ id
+uid=501(anujanagare) gid=20(staff) groups=20(staff),701(com.apple.sharepoint.group.1),12(everyone),61(localaccounts),79(_appserverusr),80(admin),81(_appserveradm),98(_lpadmin),399(com.apple.access_ssh-disabled),703(com.apple.sharepoint.group.3),704(com.apple.sharepoint.group.4),33(_appstore),100(_lpoperator),204(_developer),395(com.apple.access_ftp),398(com.apple.access_screensharing),702(com.apple.sharepoint.group.2)
+
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ alias
+alias c='clear'
+alias d='date'
+
