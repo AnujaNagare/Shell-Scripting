@@ -1,0 +1,75 @@
+#Sec5_Notes
+
+------------------------
+
+Conditional_stmnts.sh
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ cat Conditional_stmnts.sh
+#!/bin/bash
+
+echo $(( 10 < 7 ))
+
+echo $(( 10 > 7 ))
+
+
+echo $1
+
+if [ $1 -gt 250 ]
+then 
+echo  "number is greater than 250"
+fi
+
+
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ ./Conditional_stmnts.sh 20
+0
+1
+20
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ ./Conditional_stmnts.sh 2000
+0
+1
+2000
+number is greater than 250
+
+------------------------
+
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ vi Conditional_stmnts.sh
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ ./Conditional_stmnts.sh 20
+0
+1
+20
+number is less than 250
+File is missing
+Yes, that's true.
+No.
+0
+1
+
+------------------------
+
+
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ date
+Sun Apr 12 14:54:55 CDT 2020
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ echo $?
+0
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ date123
+-bash: date123: command not found
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ echo $?
+127
+
+------------------------
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ ./Conditional_stmnts.sh 20
+0
+1
+20
+number is less than 250
+File is existing 
+Yes, that's true.
+No.
+0
+1
+File created at /tmp/abcd
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ ls -lrt /tmp/abcd
+-rw-r--r--  1 anujanagare  wheel  0 Apr 12 15:29 /tmp/abcd
+
+------------------------
+
+

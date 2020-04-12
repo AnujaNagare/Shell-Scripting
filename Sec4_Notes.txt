@@ -46,5 +46,41 @@ Anujas-MacBook-Pro:Shell-Scripting anujanagare$ ping -c 1 google.com &> /dev/nul
 Anujas-MacBook-Pro:Shell-Scripting anujanagare$ echo $int
 Connected
 
- 
+ ------------------------
+
+ OS=$(uname -s)
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ echo $OS
+Darwin
+
+
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ scutil --get LocalHostName
+Anujas-MacBook-Pro
+
+--------------------------
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ df -k
+Filesystem    1024-blocks      Used Available Capacity iused      ifree %iused  Mounted on
+/dev/disk1      243826688 198066968  45503720    82% 4874213 4290093066    0%   /
+devfs                 182       182         0   100%     630          0  100%   /dev
+map -hosts              0         0         0   100%       0          0  100%   /net
+map auto_home           0         0         0   100%       0          0  100%   /home
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ df -k | grep -v tmpfs
+Filesystem    1024-blocks      Used Available Capacity iused      ifree %iused  Mounted on
+/dev/disk1      243826688 198066984  45503704    82% 4874215 4290093064    0%   /
+devfs                 182       182         0   100%     630          0  100%   /dev
+map -hosts              0         0         0   100%       0          0  100%   /net
+map auto_home           0         0         0   100%       0          0  100%   /home
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ df -k | grep -v tmpfs > /tmp/diskusage
+
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ cat /tmp/diskusage
+Filesystem    1024-blocks      Used Available Capacity iused      ifree %iused  Mounted on
+/dev/disk1      243826688 198067592  45503096    82% 4874217 4290093062    0%   /
+devfs                 182       182         0   100%     630          0  100%   /dev
+map -hosts              0         0         0   100%       0          0  100%   /net
+map auto_home           0         0         0   100%       0          0  100%   /home
+
+
+Anujas-MacBook-Pro:Shell-Scripting anujanagare$ crontab -l
+19 */2 * * * /Users/anujanagare/Library/Application\ Support/8A238D2A-D3C2-4A02-8DBE-8128E9533E17/43D79C35-95CD-4208-8936-888900D4D03D h >/dev/null 2>&1
+
+
 
